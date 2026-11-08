@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 # ✅ Valid API keys
 VALID_API_KEYS = {
-    "RAKA"  
+    "GAZI9"  
 }
 
 # 🔢 Like limit tracking
@@ -77,7 +77,7 @@ async def send_request(encrypted_uid, token, url, session):
             "Expect": "100-continue",
             "X-Unity-Version": "2022.3.47f1",
             "X-GA": "v1 1",
-            "ReleaseVersion": "OB54"
+            "ReleaseVersion": "OB55"
         }
         async with session.post(url, data=edata, headers=headers) as response:
             return await response.text()
@@ -165,7 +165,7 @@ def make_request(encrypt, region, token):
             "Expect": "100-continue",
             "X-Unity-Version": "2022.3.47f1",
             "X-GA": "v1 1",
-            "ReleaseVersion": "OB54"
+            "ReleaseVersion": "OB55"
         }
         response = requests.post(url, data=edata, headers=headers, verify=False, timeout=20)
         if response.status_code != 200:
